@@ -1,0 +1,3 @@
+Completed: newsletter.html built from starter (header, hero, 3 content items, 2 CTAs, footer); images optimised in images/; tested at 375/480/600/1440 in Chromium (no overflow, images load, links resolve locally); QA matrix and compatibility report completed.
+Not done: genuine Gmail/Outlook/Apple Mail tests (marked Not tested); Google Drive upload/sharing (no Drive access here); real preferences/unsubscribe URLs (not supplied).
+Open the file from a folder where ../LANDING_PREVIEW/ sits beside it for CTA preview to work.

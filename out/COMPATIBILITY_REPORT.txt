@@ -1,0 +1,19 @@
+COMPATIBILITY REPORT — CORE LOGISTICS NEWSLETTER
+Final HTML filename: newsletter.html
+Date tested: 19 Nov 2026
+Implementation notes: Nested role=presentation tables, 600px max wrapper (MSO ghost table for Outlook), all essential styles inline, one embedded media query (max-width:480px) for padding, stacked header, heading sizes. Bulletproof table-cell buttons. Hidden preheader. No JS, external CSS, grid, flex, float or positioning. Copy follows CONTENT_AND_DESIGN.txt.
+Image formats and total weight: PNG. brand_logo.png 9.4 KB (500x140, lossless), logistics_hero.png 5.7 KB (1000x420, 128-colour palette). Images 15.1 KB; HTML 12.3 KB (limit 100 KB).
+Desktop viewport 600px: Passed in Chromium — evidence/screenshot_600px.png (and 1440px: wrapper capped at 600px).
+Mobile viewport 375px: Passed in Chromium, scrollWidth 375, no overflow — evidence/screenshot_375px.png
+Other viewport widths: 480px passed, no clipping — evidence/screenshot_480px.png
+Gmail: Not tested — no access in this environment.
+Outlook: Not tested — no access in this environment. Expected: rounded corners/radius ignored, button click area limited to text.
+Apple Mail: Not tested — no access in this environment.
+(Litmus / Email on Acid: not used.)
+Accessibility and alt-text checks: Both images have accurate alt; heading order h1 > h2 > h3; lang=en; role=presentation on all layout tables; text contrast: #617582 on white ~5:1, white on #007C78 ~5.3:1, #007C78 on white ~5.3:1 (computed estimates); links underlined in footer.
+CTA local preview verification: Both CTAs resolve to LANDING_PREVIEW#services / #enquiry (HTTP 200, anchors exist).
+Outstanding issues:
+ 1. Gmail/Outlook/Apple Mail untested; a browser viewport is not proof of client compatibility.
+ 2. Preferences and Unsubscribe have no supplied destination; both point to #services as placeholders. Replace with real authorised HTTPS URLs, and CTA URLs, before sending. Local ../ paths are not public URLs; images/ must be hosted at HTTPS URLs for real delivery.
+ 3. Design reference discrepancies (copy file followed): mobile ref says "Practical updates for growing teams." and "Three ways to move with confidence." and "ISSUE 04 / NOVEMBER 2026"; desktop ref omits "You are receiving an operations update." Reference card is ~660px wide at 1440; 600px used per spec. Typeface is Arial per spec (references render in a DejaVu-like font).
+ 4. Not run through the W3C validator (no network); tag balance checked locally.

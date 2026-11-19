@@ -1,0 +1,5 @@
+Local link check (Chromium, file:// harness mirroring package layout: EMAIL/ next to LANDING_PREVIEW/)
+EXPLORE OUR SERVICES  -> ../LANDING_PREVIEW/index.html#services  200, #services exists
+REQUEST A DELIVERY PLAN -> ../LANDING_PREVIEW/index.html#enquiry 200, #enquiry exists
+Preferences (placeholder) -> #services 200
+Unsubscribe (placeholder) -> #services 200
